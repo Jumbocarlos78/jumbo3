@@ -144,8 +144,9 @@ echo "  → ComfyUI will be available once setup completes (~20-30 min)"
 echo ""
 
 # --- JUPYTERLAB (foreground — keeps Gradient's interface alive) --------------
-exec PIP_DISABLE_PIP_VERSION_CHECK=1
-    exec jupyter lab \
+export PIP_DISABLE_PIP_VERSION_CHECK=1
+
+exec jupyter lab \
     --allow-root \
     --ip=0.0.0.0 \
     --no-browser \
